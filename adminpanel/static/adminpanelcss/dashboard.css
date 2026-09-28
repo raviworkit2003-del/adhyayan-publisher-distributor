@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+    color: #1f2937;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 240px;
+    background: #173f6f;
+    color: white;
+    padding: 25px 15px;
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 13px 15px;
+    border-radius: 6px;
+}
+
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Main content */
+
+.main-content {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+}
+
+/* Top bar */
+
+.topbar {
+    height: 70px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.topbar h1 {
+    font-size: 24px;
+}
+
+.user {
+    font-weight: bold;
+}
+
+/* Dashboard */
+
+.dashboard-content {
+    padding: 35px;
+}
+
+.dashboard-content h2 {
+    margin-bottom: 25px;
+}
+
+/* Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+
+
+/* =====================================================
+   IMPORT EXCEL
+===================================================== */
+
+.import-card {
+    max-width: 700px;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.import-card h2 {
+    color: #173f6f;
+    margin-bottom: 10px;
+}
+
+.import-card p {
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+
+/* File input */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 8px;
+    background: #f8fafc;
+    cursor: pointer;
+}
+
+
+/* Import button */
+
+.import-card button {
+    border: none;
+    background: #173f6f;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.import-card button:hover {
+    background: #0f2f54;
+    transform: translateY(-2px);
+}

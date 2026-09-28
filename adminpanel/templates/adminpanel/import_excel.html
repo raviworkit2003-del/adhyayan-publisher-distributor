@@ -1,0 +1,109 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Import Excel | Adhyayan Admin</title>
+
+    <link rel="stylesheet"
+          href="{% static 'adminpanelcss/dashboard.css' %}">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <h2>Adhyayan</h2>
+
+        <nav>
+            <a href="{% url 'adminpanel:dashboard' %}">
+                Dashboard
+            </a>
+
+            <a href="#">
+                Books
+            </a>
+
+            <a href="#">
+                Authors
+            </a>
+
+            <a href="#">
+                Categories
+            </a>
+
+            <a href="#">
+                Publishers
+            </a>
+
+            <a href="#">
+                Import Excel
+            </a>
+        </nav>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <h1>Import Excel</h1>
+
+            <div class="user">
+                {{ request.user.username }}
+            </div>
+
+        </header>
+
+
+        <section class="dashboard-content">
+
+            <div class="import-card">
+
+                <h2>Import Books from Excel</h2>
+
+                <p>
+                    Upload an Excel file to add books to the Adhyayan database.
+                </p>
+
+
+                <form method="POST"
+                      enctype="multipart/form-data">
+
+                    {% csrf_token %}
+
+                    <div class="form-group">
+
+                        <label for="excel_file">
+                            Select Excel File
+                        </label>
+
+                        <input
+                            type="file"
+                            id="excel_file"
+                            name="excel_file"
+                            accept=".xlsx,.xls"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button type="submit">
+                        Import Excel
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

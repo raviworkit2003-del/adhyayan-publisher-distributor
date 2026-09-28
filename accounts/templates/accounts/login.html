@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Login | Adhyayan Publisher  Distributor
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/pages/auth.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="auth-section">
+
+    <div class="container">
+
+        <div class="auth-wrapper">
+
+            <div class="auth-card">
+
+                <!-- Logo -->
+                <div class="auth-logo">
+                    <img
+                        src="{% static 'images/logo.jpeg' %}"
+                        alt="Adhyayan Publisher  Distributor">
+                </div>
+
+
+                <!-- Heading -->
+                <div class="auth-header">
+
+                    <h1>
+                        Welcome Back
+                    </h1>
+
+                    <p>
+                        Login to your Adhyayan account
+                    </p>
+
+                </div>
+
+
+                <!-- Login Form -->
+                <form method="POST" class="auth-form">
+
+                        {% csrf_token %}
+
+                        <div class="auth-form-group">
+                            <label for="username">Username or Email</label>
+                            <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                placeholder="Enter your username or email"
+                            >
+                        </div>
+
+                        <div class="auth-form-group">
+
+                            <div class="auth-password-row">
+                                <label for="password">Password</label>
+
+                                <a href="#" class="forgot-password">
+                                    Forgot Password?
+                                </a>
+                            </div>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                            >
+
+                        </div>
+
+                        <div class="remember-row">
+
+                            <input
+                                type="checkbox"
+                                id="remember"
+                                name="remember"
+                            >
+
+                            <label for="remember">
+                                Remember me
+                            </label>
+
+                        </div>
+
+                        <button type="submit" class="auth-btn">
+                            Login
+                        </button>
+
+                    </form>
+                <!-- Register -->
+                <div class="auth-footer">
+
+                    <p>
+                        Don't have an account?
+
+                        <a href="{%url 'register' %}">
+                            Create Account
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

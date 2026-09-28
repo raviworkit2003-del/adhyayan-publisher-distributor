@@ -1,0 +1,312 @@
+/* =====================================================
+   CATEGORIES PAGE
+===================================================== */
+
+.categories-page {
+    background: #ffffff;
+    min-height: calc(100vh - 75px);
+    padding: 70px 0 90px;
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.categories-header {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.categories-header .section-tag {
+    display: inline-block;
+    color: #c99d20;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.categories-header h1 {
+    color: #16283d;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 15px;
+}
+
+.categories-header p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #5d6b78;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   CATEGORY GRID
+===================================================== */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+
+/* =====================================================
+   CATEGORY CARD
+===================================================== */
+
+.category-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 210px;
+    padding: 30px 25px;
+
+    background: #ffffff;
+    border: 1px solid #e8e5dc;
+    border-radius: 16px;
+
+    text-decoration: none;
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.category-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #c99d20;
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-7px);
+    border-color: #c99d20;
+    box-shadow: 0 14px 35px rgba(22, 40, 61, 0.12);
+}
+
+.category-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* =====================================================
+   CATEGORY ICON
+===================================================== */
+
+.category-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 14px;
+
+    background: #193f68;
+    color: #ffffff;
+
+    font-size: 24px;
+
+    transition: all 0.3s ease;
+}
+
+.category-card:hover .category-icon {
+    background: #c99d20;
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   CATEGORY CONTENT
+===================================================== */
+
+.category-card h3,
+.category-title {
+    color: #16283d;
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 10px;
+
+    transition: color 0.3s ease;
+}
+
+.category-card:hover h3,
+.category-card:hover .category-title {
+    color: #193f68;
+}
+
+.category-card p,
+.category-description {
+    color: #6b7785;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* =====================================================
+   BOOK COUNT
+===================================================== */
+
+.category-count {
+    margin-top: 20px;
+
+    color: #c99d20;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   ARROW
+===================================================== */
+
+.category-arrow {
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+
+    color: #193f68;
+    font-size: 20px;
+
+    transition: all 0.3s ease;
+}
+
+.category-card:hover .category-arrow {
+    color: #c99d20;
+    transform: translateX(5px);
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.categories-empty {
+    text-align: center;
+    padding: 70px 20px;
+
+    color: #5d6b78;
+}
+
+.categories-empty h3 {
+    color: #16283d;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.categories-empty p {
+    margin: 0;
+}
+
+
+/* =====================================================
+   CATEGORY DETAIL / BOOK LIST
+===================================================== */
+
+.category-detail {
+    background: #ffffff;
+    padding: 60px 0 90px;
+}
+
+.category-detail-header {
+    margin-bottom: 45px;
+}
+
+.category-detail-header h1 {
+    color: #16283d;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.category-detail-header p {
+    color: #5d6b78;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1199px) {
+
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .categories-page {
+        padding: 55px 0 70px;
+    }
+
+    .categories-header h1 {
+        font-size: 38px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .categories-page {
+        padding: 45px 0 60px;
+    }
+
+    .categories-header {
+        margin-bottom: 35px;
+    }
+
+    .categories-header h1 {
+        font-size: 32px;
+    }
+
+    .categories-header p {
+        font-size: 15px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .category-card {
+        min-height: 190px;
+        padding: 25px 22px;
+    }
+
+}

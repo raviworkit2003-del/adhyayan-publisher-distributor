@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ book.title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="row">
+
+        <!-- Left Side -->
+        <div class="col-md-4">
+
+            <img src="{{ book.thumbnail }}"
+                 class="img-fluid rounded shadow"
+                 alt="{{ book.title }}">
+
+        </div>
+
+        <!-- Right Side -->
+        <div class="col-md-8">
+
+            <h1>{{ book.title }}</h1>
+
+            <h4 class="text-success">
+                ₹{{ book.price }}
+            </h4>
+
+            <hr>
+
+            <p>
+                <strong>Author:</strong>
+
+                {% for author in book.author.all %}
+                    {{ author.name }}
+                {% endfor %}
+            </p>
+
+            <p>
+                <strong>Publisher:</strong>
+                {{ book.publisher }}
+            </p>
+
+            <p>
+                <strong>Category:</strong>
+                {{ book.category }}
+            </p>
+
+            <p>
+                <strong>Language:</strong>
+                {{ book.language }}
+            </p>
+
+            <p>
+                <strong>Pages:</strong>
+                {{ book.number_of_pages }}
+            </p>
+
+            <p>
+                <strong>ISBN:</strong>
+                {{ book.isbn }}
+            </p>
+
+            <button class="btn btn-primary btn-lg">
+                Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+    <hr class="my-5">
+
+    <h3>Description</h3>
+
+    <p>
+        {{ book.description }}
+    </p>
+
+</div>
+
+{% endblock %}

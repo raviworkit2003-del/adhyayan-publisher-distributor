@@ -1,0 +1,12 @@
+:root {
+    --primary: #17375E;
+    --gold: #C9A227;
+    --light: #F8F6F2;
+    --dark: #222222;
+
+    --radius: 12px;
+    --shadow: 0 5px 20px rgba(0,0,0,.08);
+
+    --font-heading: "Cormorant Garamond", serif;
+    --font-body: "Inter", sans-serif;
+}

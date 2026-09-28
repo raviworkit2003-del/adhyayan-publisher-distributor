@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adhyayan Admin</title>
+    <link rel="stylesheet" href="{% static 'adminpanelcss/dashboard.css' %}">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h2>Adhyayan</h2>
+
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Books</a>
+            <a href="#">Authors</a>
+            <a href="#">Categories</a>
+            <a href="#">Publishers</a>
+            <a href="{% url 'adminpanel:logout' %}">Logout</a>
+            <a href="{% url "adminpanel:import_excel" %}">Import Excel</a>
+        </nav>
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <h1>Admin Dashboard</h1>
+
+            <div class="user">
+                {{ request.user.username }}
+            </div>
+        </header>
+
+
+        <section class="dashboard-content">
+
+            <h2>Welcome back, {{ request.user.username }}</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Books</h3>
+                    <p>0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Authors</h3>
+                    <p>0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Categories</h3>
+                    <p>0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Publishers</h3>
+                    <p>0</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
+</html>

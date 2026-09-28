@@ -1,0 +1,259 @@
+/* =====================================================
+   AUTH / LOGIN PAGE
+===================================================== */
+
+.auth-section {
+    min-height: calc(100vh - 75px);
+    padding: 70px 0;
+    background: #f8f7f3;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =====================================================
+   AUTH WRAPPER
+===================================================== */
+
+.auth-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* =====================================================
+   AUTH CARD
+===================================================== */
+
+.auth-card {
+    width: 100%;
+    max-width: 460px;
+    background: #ffffff;
+
+    padding: 40px;
+    border-radius: 18px;
+
+    border: 1px solid #e5e5e5;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.auth-card img {
+    display: block;
+    width: 150px !important;
+    max-width: 150px !important;
+    height: auto !important;
+    max-height: 100px;
+    object-fit: contain;
+    margin: 0 auto 25px;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-header h1 {
+    color: #16283d;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.auth-header p {
+    color: #5d6b78;
+    font-size: 15px;
+    margin: 0;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.auth-form {
+    width: 100%;
+}
+
+.auth-form-group {
+    margin-bottom: 20px;
+}
+
+.auth-form-group label {
+    display: block;
+    color: #16283d;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.auth-form-group input {
+    width: 100%;
+    padding: 13px 15px;
+
+    border: 1px solid #d7dce1;
+    border-radius: 8px;
+
+    font-size: 15px;
+    color: #16283d;
+
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+.auth-form-group input:focus {
+    border-color: #193f68;
+    box-shadow: 0 0 0 3px rgba(25, 63, 104, 0.10);
+}
+
+
+/* =====================================================
+   PASSWORD / FORGOT PASSWORD
+===================================================== */
+
+.auth-password-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forgot-password {
+    color: #193f68;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    color: #c99d20;
+}
+
+
+/* =====================================================
+   REMEMBER ME
+===================================================== */
+
+.remember-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 22px;
+}
+
+.remember-row input {
+    width: 15px;
+    height: 15px;
+}
+
+.remember-row label {
+    color: #5d6b78;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   LOGIN BUTTON
+===================================================== */
+
+.auth-btn {
+    width: 100%;
+
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #193f68;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+    background: #102d4c;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   AUTH FOOTER
+===================================================== */
+
+.auth-footer {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.auth-footer p {
+    margin: 0;
+    color: #5d6b78;
+    font-size: 14px;
+}
+
+.auth-footer a {
+    color: #193f68;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    color: #c99d20;
+}
+
+
+/* =====================================================
+   ERROR / MESSAGE
+===================================================== */
+
+.auth-error {
+    background: #fff1f1;
+    color: #b42318;
+
+    padding: 10px 14px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+    .auth-section {
+        padding: 40px 15px;
+    }
+
+    .auth-card {
+        padding: 30px 22px;
+    }
+
+    .auth-header h1 {
+        font-size: 28px;
+    }
+
+    .auth-logo {
+        width: 130px;
+    }
+}

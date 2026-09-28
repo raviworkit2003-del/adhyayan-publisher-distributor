@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}
+Books
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <h2 class="text-center mb-5">
+        Our Books
+    </h2>
+
+    <div class="row">
+
+        {% for book in page_obj %}
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+
+            <div class="card h-100 shadow-sm">
+
+                <img src="{{ book.thumbnail }}"
+                     class="card-img-top"
+                     alt="{{ book.title }}">
+
+                <div class="card-body">
+
+                    <h5>{{ book.title }}</h5>
+
+                    <p>
+
+                        {% for author in book.author.all %}
+                            {{ author.name }}<br>
+                        {% endfor %}
+
+                    </p>
+
+                    <h6>₹{{ book.price }}</h6>
+
+                    <a href="{% url 'book_detail' book.id %}"
+                       class="btn btn-primary w-100">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+<div class="d-flex justify-content-center mt-5">
+
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}"
+           class="btn btn-outline-primary me-2">
+            ← Previous
+        </a>
+    {% endif %}
+
+    <span class="btn btn-light disabled">
+        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+    </span>
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}"
+           class="btn btn-outline-primary ms-2">
+            Next →
+        </a>
+    {% endif %}
+
+</div>
+
+{% endblock %}
+

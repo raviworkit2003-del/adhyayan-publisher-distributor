@@ -1,0 +1,103 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg custom-navbar shadow-sm sticky-top">
+
+    <div class="container">
+
+        <!-- LOGO -->
+        <a href="{% url 'home' %}" class="logo">
+            <img
+                src="{% static 'images/logo.jpeg' %}"
+                alt="Adhyayan Publisher Distributor"
+                  style="width:160px !important; height:auto !important; display:block !important;">
+        </a>
+
+
+        <!-- MOBILE TOGGLE -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar"
+            aria-controls="navbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+        <div class="collapse navbar-collapse" id="navbar">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'books' %}">
+                        Books
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Authors
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href={% url "category" %}>
+                        Categories
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Publishers
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'publish_with_us' %}">
+                        Publish With Us
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- SEARCH -->
+            <form class="d-flex me-3">
+
+                <input
+                    class="form-control search-box"
+                    type="search"
+                    placeholder="Search Books...">
+
+            </form>
+
+
+            <!-- BUTTONS -->
+            <div class="d-flex gap-2">
+
+                <a href="{% url "login" %}" class="btn btn-login">
+                    Login
+                </a>
+
+                <a href="#" class="btn btn-register">
+                    Register
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>

@@ -1,0 +1,147 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.custom-navbar {
+    background: var(--light);
+    border-bottom: 2px solid var(--gold);
+}
+
+.custom-navbar > .container {
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+
+
+.navbar-nav .nav-link {
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px 14px;
+}
+.custom-navbar .logo {
+    display: flex;
+    align-items: center;
+
+    width: 160px;
+    height: auto;
+
+    flex: 0 0 160px;
+
+    overflow: hidden;
+}
+
+.custom-navbar .logo img {
+    display: block;
+
+    width: 160px !important;
+    height: auto !important;
+
+    max-width: 160px !important;
+}
+
+
+/* =========================
+   NAVIGATION LINKS
+========================= */
+
+.nav-link {
+    color: var(--dark);
+    font-weight: 500;
+    margin: 0 9px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--gold);
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--gold);
+
+    left: 0;
+    bottom: 0;
+
+    transition: .3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box {
+    width: 220px;
+    border-radius: 50px;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.btn-login {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    border-radius: 30px;
+    padding: 8px 18px;
+}
+
+.btn-login:hover {
+    background: var(--primary);
+    color: white;
+}
+
+
+/* =========================
+   REGISTER BUTTON
+========================= */
+
+.btn-register {
+    background: var(--gold);
+    color: white;
+    border-radius: 30px;
+    padding: 8px 18px;
+}
+
+.btn-register:hover {
+    background: #a88418;
+    color: white;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .custom-navbar .logo {
+        width: 140px;
+        height: auto;
+        flex: 0 0 140px;
+    }
+
+    .custom-navbar .logo img {
+        width: 140px !important;
+        height: auto !important;
+        max-width: 140px !important;
+    }
+
+}
